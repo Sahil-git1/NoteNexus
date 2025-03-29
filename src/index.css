@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: "Inter", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+}
+/* ------------------ROOT------------------------------ */
+:root{
+  --text:#0d0116;
+  --background:#f9f4fe;
+  --primary:#981ff2;
+  --secondary:#f7ed78;
+  --accent:#76f549;
+}
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  background-color: var(--background);
+}
+/* ------------------------NAVBAR-------------------------- */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4%;
+  margin-top: 20px;
+}
+.logo{
+  /* color: var(--accent); */
+  font-weight: 400;
+  font-size: 1.9em;
+}
+.logo span{
+  color: hsl(120, 100%, 40%);
+  padding-left: 2px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.nav__right{
+  font-weight: 600;
+  padding-right: 2%;
+  font-size: 1.2em;
+  position: relative;
+  top: 1%;
+display: flex;
+align-items: center;
+gap:3vw;
+}
+.nav__right .a{
+  background-color: var(--secondary);
+  padding: 5.9%;
+  border-radius: 10px;
+  padding-inline: 5.8%;
+}
+nav .a{
+  text-decoration: none;
+  color:black;
+}
+nav .a:hover{
+  /* color: white; */
+  background-color: var(--accent);
+  transition: background 0.4s ease, transform 0.3s ease;
+  transform: scale(1.02);
+}
+/* -------------------------HERO--------------------------- */
+.hero{
+  height: 30vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  /* gap: 7%; */
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+.hero div:first-child{
+font-size: 2.5em;
+font-weight: 600;
+}
+.hero div:nth-child(2){
+  font-weight:500;
+font-size: 1.1em;
+
+}
+/* -----------------LOGIN--------------------- */
+.login{
+  border: 1px solid hsl(0, 0%, 40%);
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  /* font-weight: 500; */
+ justify-content: center;
+ gap: 30px;
+ letter-spacing: 1px;
+}
+.login button{
+  border: none;
+  background-color:hsl(120, 100%, 38%);
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 1%;
+  border-radius: 10px;
+  padding-inline: 2%;
+}
+.login button:hover{
+  color: var(--background);
+  cursor: pointer;
+  background-color: var(--primary);
+  transition: background 0.4s ease, transform 0.3s ease;
+  transform: scale(1.02);
+}
+
+/* -----------------------------------FAQs----------------------------- */
+
+.faq-section {
+  padding-top: 2%;
+  height: 70vh;
+  width: 99%;
+  text-align: center;
+}
+
+.faq-section  h2 {
+  font-size:2em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  width: 70vw;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 70vw;
+  text-align: center;
+  background: hsl(198, 100%, 10%);
+  color: white;
+  border: none;
+  padding: 20px 22px;
+  font-size: 1.1em;
+  font-weight: 700;
+  display: flex; 
+  
+  justify-content: space-between;
+  align-items: center; 
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background:  hsl(198, 100%, 20%);
+}
+
+.icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  text-align: left;
+  line-height: 1.2;
+  width: 70vw;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  background:hsl(198, 100%, 20%);
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 0 0px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+
+.faq-answer.show {
+  max-height: 150px;
+  padding: 15px 20px;
+}
